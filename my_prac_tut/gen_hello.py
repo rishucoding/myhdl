@@ -8,7 +8,7 @@ from myhdl import instance, Signal, delay, block, always, now
 @block
 def hello(clk, to = "world", period = 20):
 	
-	lowTime = int(period/3)
+	lowTime = int(period/2)
 	highTime = period - lowTime
 
 	@instance
@@ -36,6 +36,6 @@ def hello(clk, to = "world", period = 20):
 
 	return drive_clk, say_hello
 
-clk = Signal(0)
-ins = hello(clk)
-ins.run_sim(50)
+#clk = Signal(0)
+#ins = hello(clk)
+#ins.run_sim(50)
